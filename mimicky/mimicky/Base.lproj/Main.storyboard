@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cWi-4B-qeS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cWi-4B-qeS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -26,12 +27,6 @@
                                     <action selector="recordAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hJQ-eE-bI1"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyn-rJ-6RX">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.25098040699958801" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONQ-Qr-lsV">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="stopbutton">
@@ -41,6 +36,15 @@
                                     <action selector="stopRecordingAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0k8-Vg-bRT"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap To Record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyn-rJ-6RX">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.25098040699958801" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="144" y="352" width="113" height="14"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -54,8 +58,8 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="lah-8c-Vuw"/>
-                                <exclude reference="dyn-rJ-6RX"/>
                                 <exclude reference="ONQ-Qr-lsV"/>
+                                <exclude reference="dyn-rJ-6RX"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="PqF-6n-2IH"/>
@@ -69,8 +73,8 @@
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="lah-8c-Vuw"/>
-                                <include reference="dyn-rJ-6RX"/>
                                 <include reference="ONQ-Qr-lsV"/>
+                                <include reference="dyn-rJ-6RX"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="PqF-6n-2IH"/>
@@ -103,6 +107,7 @@
                         <viewControllerLayoutGuide type="bottom" id="uNT-VQ-oq9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3Wo-r6-Q5v">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tA2-pf-oZ8">
@@ -179,16 +184,16 @@
                                 <exclude reference="R83-Yw-gfU"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="M9q-Cf-AHP"/>
-                                <exclude reference="ZaJ-sk-GhA"/>
-                                <exclude reference="Ziq-np-Lbk"/>
-                                <exclude reference="lUv-fK-KVt"/>
                                 <exclude reference="urr-GO-Hfl"/>
                                 <exclude reference="vCf-aJ-1LA"/>
                                 <exclude reference="dNb-Bt-zpd"/>
                                 <exclude reference="kM2-TS-weA"/>
+                                <exclude reference="Ziq-np-Lbk"/>
+                                <exclude reference="lUv-fK-KVt"/>
                                 <exclude reference="Gni-qx-lqE"/>
                                 <exclude reference="vg2-u8-wsS"/>
+                                <exclude reference="M9q-Cf-AHP"/>
+                                <exclude reference="ZaJ-sk-GhA"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -200,16 +205,16 @@
                                 <include reference="R83-Yw-gfU"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="M9q-Cf-AHP"/>
-                                <include reference="ZaJ-sk-GhA"/>
-                                <include reference="Ziq-np-Lbk"/>
-                                <include reference="lUv-fK-KVt"/>
                                 <include reference="urr-GO-Hfl"/>
                                 <include reference="vCf-aJ-1LA"/>
                                 <include reference="dNb-Bt-zpd"/>
                                 <include reference="kM2-TS-weA"/>
+                                <include reference="Ziq-np-Lbk"/>
+                                <include reference="lUv-fK-KVt"/>
                                 <include reference="Gni-qx-lqE"/>
                                 <include reference="vg2-u8-wsS"/>
+                                <include reference="M9q-Cf-AHP"/>
+                                <include reference="ZaJ-sk-GhA"/>
                             </mask>
                         </variation>
                     </view>

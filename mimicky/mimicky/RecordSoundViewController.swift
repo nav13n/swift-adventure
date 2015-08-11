@@ -35,8 +35,8 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
 
     @IBAction func recordAudio(sender: UIButton) {
        
-        //TODO: Record user's voice
-        recordingInProgress.hidden=false;
+        //Record user's voice
+        recordingInProgress.text="recording..."
         recordButton.enabled=false;
         stopButton.hidden=false;
         
@@ -65,7 +65,7 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
     @IBAction func stopRecordingAudio(sender: UIButton) {
         
         //Stop recording session
-        recordingInProgress.hidden=true;
+        recordingInProgress.text="Tap To Record";
         audioRecorder.stop()
         var audioSession = AVAudioSession.sharedInstance()
         audioSession.setActive(false, error: nil)
@@ -74,9 +74,7 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
     
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully flag: Bool) {
         if(flag){
-            recordedAudio=RecordedAudio()
-            recordedAudio.filePathUrl=recorder.url
-            recordedAudio.title=recorder.url.lastPathComponent
+            recordedAudio=RecordedAudio(filePathUrl: recorder.url,title: recorder.url.lastPathComponent!)
             
             //Move to teh next scene and pass teh recorded audio data
             self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
